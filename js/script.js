@@ -12,21 +12,6 @@ createApp({
                 {
                 text: 'fare la cacca è bello',
                 done: false,
-                },{
-                text: 'fare la cacca è bello',
-                done: true,
-                },{
-                text: 'fare la cacca è bello',
-                done: false,
-                },{
-                text: 'fare la cacca è bello',
-                done: true,
-                },{
-                text: 'fare la cacca è bello',
-                done: false,
-                },{
-                text: 'fare la cacca è bello',
-                done: true,
                 },
             ]
             
@@ -44,6 +29,19 @@ createApp({
             this.todo.push({text: this.newTodo, done: false});
 
             this.newTodo = '';
+
+        },
+        todoTextslashed(todo) {
+
+            if (todo.done == true) {
+
+                todo.done = false;
+
+            } else {
+
+                todo.done = true;
+
+            }
 
         }
     },

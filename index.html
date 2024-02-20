@@ -22,10 +22,11 @@
     <!-- Vue-js -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
-    <div id="app">
+    <div class="container-fluid" id="app">
+
         <ul v-if="todo.length > 0" class="list-group">
-            <li v-for="(todo, index) in todo" class="list-group-item d-flex align-items-center justify-content-between "  >
-                <span :class="todo.done == false ? '' : 'text-decoration-line-through ' ">{{todo.text}}</span>
+            <li v-for="(todo, index) in todo" class="list-group-item d-flex align-items-center justify-content-between " @click="todoTextslashed(todo)" >
+                <span :class="todo.done == false ? '' : 'text-decoration-line-through' ">{{todo.text}}</span>
                 <i @click="deleteTodo(index)" class="fa-regular fa-trash-can text-decoration-none" id="trash"></i>
             </li>
         </ul>
