@@ -29,6 +29,17 @@
                 <i @click="deleteTodo(index)" class="fa-regular fa-trash-can text-decoration-none" id="trash"></i>
             </li>
         </ul>
+
+        <div id="addTodo" class="py-4 ">
+            <label class="form-label px-2 ">Aggiungi un componente alla lista</label>
+            <div class="input-group mb-3">
+                <input 
+                    v-model="newTodo" type="text" class="form-control" placeholder="Testo da inserire" aria-label="Testo del todo" aria-describedby="add-todo" @keyup.enter="addTodo(newTodo)">
+                <button 
+
+                    class="btn btn-outline-secondary" type="button" id="add-todo" @click="addTodo(newTodo)" >Aggiungi</button>
+            </div>
+        </div>
     </div>
 
     <!-- script -->

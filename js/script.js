@@ -6,6 +6,8 @@ createApp({
     data() {
         return {
             
+            newTodo: '',
+
             todo: [
                 {
                 text: 'fare la cacca è bello',
@@ -33,7 +35,16 @@ createApp({
     },
     methods: {
         deleteTodo(todoindex) {
-            this.todo.splice(todoindex, 1)
+
+            this.todo.splice(todoindex, 1);
+
+        },
+        addTodo() {
+
+            this.todo.push({text: this.newTodo, done: false});
+
+            this.newTodo = '';
+
         }
     },
 }).mount('#app')
