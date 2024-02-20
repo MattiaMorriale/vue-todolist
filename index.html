@@ -22,23 +22,26 @@
     <!-- Vue-js -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
-    <div class="container-fluid" id="app">
+    <div class="container-fluid d-flex justify-content-center mt-5 " id="app">
 
-        <ul v-if="todo.length > 0" class="list-group">
-            <li v-for="(todo, index) in todo" class="list-group-item d-flex align-items-center justify-content-between " @click="todoTextslashed(todo)" >
-                <span :class="todo.done == false ? '' : 'text-decoration-line-through' ">{{todo.text}}</span>
-                <i @click="deleteTodo(index)" class="fa-regular fa-trash-can text-decoration-none" id="trash"></i>
-            </li>
-        </ul>
+        <div class="col-8 d-flex flex-column justify-content-center">
 
-        <div id="addTodo" class="py-4 ">
-            <label class="form-label px-2 ">Aggiungi un componente alla lista</label>
-            <div class="input-group mb-3">
-                <input 
-                    v-model="newTodo" type="text" class="form-control" placeholder="Testo da inserire" aria-label="Testo del todo" aria-describedby="add-todo" @keyup.enter="addTodo(newTodo)">
-                <button 
-
-                    class="btn btn-outline-secondary" type="button" id="add-todo" @click="addTodo(newTodo)" >Aggiungi</button>
+            <ul v-if="todo.length > 0" class="list-group">
+                <li v-for="(todo, index) in todo" class=" d-flex align-items-center justify-content-between p-3" @click="todoTextslashed(todo)" >
+                    <span :class="todo.done == false ? '' : 'text-decoration-line-through' ">{{todo.text}}</span>
+                    <i @click="deleteTodo(index)" class="fa-regular fa-trash-can text-decoration-none" id="trash"></i>
+                </li>
+            </ul>
+    
+            <div id="addTodo" class="py-4 ">
+                <label class="form-label px-2 ">Aggiungi un componente alla lista</label>
+                <div class="input-group mb-3">
+                    <input 
+                        v-model="newTodo" type="text" class="form-control" placeholder="Testo da inserire" aria-label="Testo del todo" aria-describedby="add-todo" @keyup.enter="addTodo(newTodo)">
+                    <button 
+    
+                        class="btn btn-outline-secondary" type="button" id="add-todo" @click="addTodo(newTodo)" >Aggiungi</button>
+                </div>
             </div>
         </div>
     </div>

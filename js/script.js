@@ -10,7 +10,7 @@ createApp({
 
             todo: [
                 {
-                text: 'fare la cacca è bello',
+                text: 'Andare a prendere il pane ',
                 done: false,
                 },
             ]
