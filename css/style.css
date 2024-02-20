@@ -4,6 +4,19 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: bisque;
+}
+
 #trash:hover {
     color: red;
+}
+
+ul {
+   background-color: aliceblue; 
+   border: solid 2px rgb(21, 44, 255);
+}
+
+.continput {
+    border: solid 2px rgb(21, 44, 255);
 }
